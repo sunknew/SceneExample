@@ -1,13 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using Unity.Entities;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System;
+using Unity.Scenes;
 
 public class SimpleSceneSwitch : MonoBehaviour
 {
     public float scale = 1f;
+
     public void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
@@ -67,7 +66,23 @@ public class SimpleSceneSwitch : MonoBehaviour
 
     public void CleanUp()
     {
-        EntityManager m_Manager = World.DefaultGameObjectInjectionWorld.EntityManager;
-        m_Manager.DestroyEntity(m_Manager.GetAllEntities());
+        EntityManager entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
+        entityManager.DestroyEntity(entityManager.GetAllEntities());
     }
+
+    /*
+    public void loadSubScene()
+    {
+        var entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
+        var sceneSystem = entityManager.World.GetExistingSystem<SceneSystem>();
+        sceneSystem.LoadSceneAsync(sceneSystem.GetSceneGUID("Assets/Scenes/Scene-03/SubScenes/RoatingMultiCudeSubScene.unity"));
+    }
+
+    public void unloadSubScene()
+    {
+        var entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
+        var sceneSystem = entityManager.World.GetExistingSystem<SceneSystem>();
+        sceneSystem.UnloadScene(sceneSystem.GetSceneGUID("Assets/Scenes/Scene-03/SubScenes/RoatingMultiCudeSubScene.unity"));
+    }
+    */
 }

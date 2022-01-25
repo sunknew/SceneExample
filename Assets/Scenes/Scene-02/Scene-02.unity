@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 202676316}
   - component: {fileID: 202676315}
+  - component: {fileID: 202676317}
   m_Layer: 0
   m_Name: RoatingCubeSubScene
   m_TagString: Untagged
@@ -154,7 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _SceneAsset: {fileID: 102900000, guid: ebdad6694b1b9ee49afb2f1dc7caf79a, type: 3}
   _HierarchyColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  AutoLoadScene: 1
+  AutoLoadScene: 0
   _SceneGUID:
     Value:
       x: 2523770302
@@ -175,6 +176,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &202676317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 202676314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea475bfdefabfc543924d7be57522952, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  subscene: {fileID: 202676315}
 --- !u!1 &333748646
 GameObject:
   m_ObjectHideFlags: 0

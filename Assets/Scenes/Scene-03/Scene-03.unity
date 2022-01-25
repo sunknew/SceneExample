@@ -349,6 +349,7 @@ GameObject:
   m_Component:
   - component: {fileID: 237844617}
   - component: {fileID: 237844616}
+  - component: {fileID: 237844618}
   m_Layer: 0
   m_Name: RoatingMultiCudeSubScene
   m_TagString: Untagged
@@ -370,7 +371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _SceneAsset: {fileID: 102900000, guid: 46f4e184f24d95647bf158d8618220a7, type: 3}
   _HierarchyColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  AutoLoadScene: 1
+  AutoLoadScene: 0
   _SceneGUID:
     Value:
       x: 1209945956
@@ -391,6 +392,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &237844618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 237844615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea475bfdefabfc543924d7be57522952, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  subscene: {fileID: 237844616}
 --- !u!1 &1106526487
 GameObject:
   m_ObjectHideFlags: 0
